@@ -10,7 +10,11 @@ class RPSGame
       (hand1 == "paper" && hand2 == "rock") ||
       (hand1 == "scissors" && hand2 == "paper")
       winner = player1
-
+    elsif (hand1 == "rock" && hand2 == "paper") ||
+      (hand1 == "paper" && hand2 == "scissors") ||
+      (hand1 == "scissors" && hand2 == "rock")
+      winner = player2
+    end
   end
 
-end  
+end
