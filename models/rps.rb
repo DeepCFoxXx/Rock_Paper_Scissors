@@ -7,12 +7,12 @@ class RPSGame
     winner = nil
 
     if (hand1 == "rock" && hand2 == "scissors") ||
-      (hand1 == "paper" && hand2 == "rock") ||
-      (hand1 == "scissors" && hand2 == "paper")
+       (hand1 == "paper" && hand2 == "rock") ||
+       (hand1 == "scissors" && hand2 == "paper")
       winner = player1
     elsif (hand1 == "rock" && hand2 == "paper") ||
-      (hand1 == "paper" && hand2 == "scissors") ||
-      (hand1 == "scissors" && hand2 == "rock")
+       (hand1 == "paper" && hand2 == "scissors") ||
+       (hand1 == "scissors" && hand2 == "rock")
       winner = player2
     end
 
@@ -21,7 +21,7 @@ class RPSGame
     elsif hand1 == hand2
       return "Draw."
     else
-      return "Not a valid input."
+      return "Not A V"
     end
   end
 

@@ -12,3 +12,7 @@ end
 get '/' do
   erb(:rules)
 end
+
+get '/result' do
+  erb(:result)
+end
