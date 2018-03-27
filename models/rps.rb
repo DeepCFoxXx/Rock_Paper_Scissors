@@ -1,28 +1,16 @@
 class RPSGame
 
-  def self.check_win(hand1, hand2)
-    hand1 = hand1.downcase
-    hand2 = hand2.downcase
+  def self.check_win(player1, player2)
+    hand1 = player1[:hand].downcase
+    hand2 = player2[:hand].downcase
 
-    if hand1 == hand2
-      return "Draw!"
-    end
+    winner = nil
 
-    if hand1 == "rock" && hand2 == "scissors"
-      return "Rock wins!"
-    elsif hand1 == "rock" && hand2 == "paper"
-      return "Paper wins!"
-    elsif hand1 == "paper" && hand2 == "scissors"
-      return "Scissors wins!"
-    elsif hand1 == "paper" && hand2 == "rock"
-      return "Paper wins!"
-    elsif hand1 == "scissors" && hand2 == "paper"
-      return "Scissors wins!"
-    elsif hand1 == "scissors" && hand2 == "rock"
-      return "Rock wins!"
-    end
+    if (hand1 == "rock" && hand2 == "scissors") ||
+      (hand1 == "paper" && hand2 == "rock") ||
+      (hand1 == "scissors" && hand2 == "paper")
+      winner = player1
 
-    return "oops, looks like you didn't enter valid inputs!"
   end
 
-end
+end  
