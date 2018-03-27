@@ -7,3 +7,7 @@ get '/:hand1/:hand2' do
   hand2 = params[:hand2]
   return RPSGame.check_win(hand1, hand2)
 end
+
+get '/' do
+  erb(:rules)
+end
