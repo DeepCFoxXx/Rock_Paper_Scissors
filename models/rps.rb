@@ -19,10 +19,12 @@ class RPSGame
     if winner != nil
       return "Player #{winner[:player_no]} won by playing #{winner[:hand]}!"
     elsif hand1 == hand2
-      return "Draw."
+      return "It was a draw."
     else
-      return "Not A V"
+      return "Not A Valid Input"
     end
+
   end
+
 
 end
