@@ -3,9 +3,10 @@ require('sinatra/contrib/all') if development?
 require_relative('./models/rps.rb')
 
 get '/:hand1/:hand2' do
-  hand1 = params[:hand1]
-  hand2 = params[:hand2]
-  return RPSGame.check_win(hand1, hand2)
+  player1 = { player_no: 1, hand: params[:hand1]}
+  player2 = { player_no: 2, hand: params[:hand2]}
+  @result = RPSGame.check_win(player1, player2)
+  erb(:result)
 end
 
 get '/' do
