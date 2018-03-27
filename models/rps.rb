@@ -15,6 +15,14 @@ class RPSGame
       (hand1 == "scissors" && hand2 == "rock")
       winner = player2
     end
+
+    if winner != nil
+      return "Player #{winner[:player_no]} won by playing #{winner[:hand]}!"
+    elsif hand1 == hand2
+      return "Draw."
+    else
+      return "Not a valid input."
+    end
   end
 
 end
